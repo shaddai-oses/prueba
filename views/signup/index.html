@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Signup</title>
+</head>
+<body class="bg-[#020617]">
+
+<nav id="navbar" class=" bg-violet-800 fixed top-0 right-0 left-0 h-[5rem]">
+</nav>
+
+<div id="notification" class="fixed top-24 left-0 right-0 ">
+</div>
+
+<div class="pt-12 h-screen flex max-w-7xl mx-auto justify-center items-center px-4">
+    <div class="hidden lg:flex w-2/4 justify-center items-center">
+        <img class="w-3/4 h-3/4 pt-20" src="/img/registro.svg" alt="imagen para registro">
+    </div>
+    <form id="form" class=" flex flex-col gap-2 p-4 rounded-lg text-md lg:w-2/4">
+        <div class="flex-col  gap-2 pt-20">
+            <h1 class="text-4xl text-violet-50 font-bold">Create account</h1>
+        </div>
+        <div class="flex flex-col gap-2">
+            <label for="name-input" class="font-bold text-slate-200">Name : <span class="text-red-500">*</span></label>
+            <input type="text" 
+            name="name-input" 
+            id="name-input" 
+            autocomplete="off" 
+            placeholder="Maria Gonzalez"
+            class="rounded-full p-3 bg-[#1e293b] text-violet-50 focus:outline-none">
+            <p class="text-xs text-zinc-400">
+                It would be your first and last name. Both the first name and the last name should start with capital letters. 
+            </p>
+        </div>
+
+        <div class="flex flex-col gap-2">
+            <label for="email-input" class="font-bold text-slate-200">Email : <span class="text-red-500">*</span></label>
+            <input type="text" 
+            name="email-input" 
+            id="email-input"
+            autocomplete="off" 
+            placeholder="example@gmail.com"
+            class="rounded-full p-3 bg-[#1e293b] text-violet-50 focus:outline-none">
+            <p class="text-xs text-zinc-400">The email is required.</p>
+        </div>
+
+        <div class="flex flex-col gap-2">
+            <label for="password-input" class="font-bold text-slate-200">Password : <span class="text-red-500">*</span></label>
+            <input 
+            name="password-input" 
+            id="password-input" 
+            autocomplete="off" 
+            type="password"
+            class="rounded-full p-3 bg-[#1e293b] text-violet-50 focus:outline-none">
+            <p class="text-xs text-zinc-400">
+                It must have at least 1 letter, 1 number and at least 8 characters . <br>
+            </p>
+        </div>
+
+        <div class="flex flex-col gap-2">
+            <label for="match-input" class="font-bold text-slate-200">Match password : <span class="text-red-500">*</span></label>
+            <input 
+            name="match-input" 
+            id="match-input" 
+            autocomplete="off" 
+            type="password"
+            class="rounded-full p-3 bg-[#1e293b] text-violet-50 focus:outline-none">
+            <p class="text-xs text-zinc-400">
+                It must match the password.
+            </p>
+        </div>
+
+        <button 
+        id="form-btn"
+        disabled
+        class="bg-violet-800 font-bold rounded-full text-violet-50 p-3 hover:bg-violet-700 text-center transition ease-in-out disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+        Registrar
+    </button>
+    </form>
+</div>    
+<script type="module" src="/components/nav.js"></script>
+<script type="module" src="index.js"></script>
+<script  type="module" src="../components/notification.js"></script>
+</body>
+</html>
